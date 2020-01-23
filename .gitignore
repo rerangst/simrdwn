@@ -1,0 +1,9 @@
+_backup/
+_extras/
+notes/
+.DS_Store
+__pycache__/
+.weights
+data/
+docker/
+results/

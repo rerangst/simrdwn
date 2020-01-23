@@ -206,7 +206,7 @@
     x = BatchNormalization(name='norm_22')(x)
     x = LeakyReLU(alpha=0.1)(x)
 ```
-- Với bộ dataset tương ứng với ảnh máy bay( chỉ có 1 class) quá trình huấn luyện sẽ là quá trình *finetuning* từ file trọng số đã có trước( dowload tại <a href="https://drive.google.com/drive/folders/10oym4eL2RxJa0gro26vzXK__TtYOP5Ng">đây</a>)
+- Với bộ dataset tương ứng với ảnh máy bay( chỉ có 1 class) quá trình huấn luyện sẽ là quá trình *finetuning* từ file trọng số đã có trước( dowload tại <a href="https://drive.google.com/drive/folders/1NQ5ok8gX6XBpeRCoT7PgO8QNKCyQUO8q?usp=sharing">đây</a>)
 
 
 ## Huấn luyện mô hình phân lớp đối tượng
@@ -285,7 +285,6 @@
 # Ứng dụng phát hiện đối tượng
 
 - Bảo đảm rằng các file `config_plane.json`, `full_yolo_plane.h5` và `classModel.h5` nằm trong folder chứa source trước khi chạy.
-
 - Mở ứng dụng bằng cách chạy câu lệnh
 
     `python run.py`

@@ -614,7 +614,7 @@ class Window(QMainWindow):
         self.textedit.append("***********************************")
         # self.textedit.append("")
         self.textedit.append(str("Phát hiện đối tượng"))
-        with open('abc/config_plane.json') as config_buffer:
+        with open('config_plane.json') as config_buffer:
             config = json.load(config_buffer)
         yolo = YOLO(backend=config['model']['backend'],
                     input_size=config['model']['input_size'],
@@ -622,7 +622,7 @@ class Window(QMainWindow):
                     max_box_per_image=config['model']['max_box_per_image'],
                     anchors=config['model']['anchors'])
         yolo.load_weights('full_yolo_plane.h5')
-        classModel = load_model('model_saved1.h5')
+        classModel = load_model('classModel.h5')
         obj_threshold=0.3
         for imgPath in self.imageList:
             WINDOW_SIZE = (544, 544)

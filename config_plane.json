@@ -1,0 +1,36 @@
+{
+    "model" : {
+        "backend":              "Full Yolo",
+        "input_size":           416,
+        "anchors":              [0.53,0.51, 0.92,0.69, 1.36,1.67, 1.62,1.55, 1.83,1.84],
+        "max_box_per_image":    10,
+        "labels":               ["plane"]
+    },
+
+    "train": {
+        "train_image_folder":   "./plane/images/",
+        "train_annot_folder":   "./plane/labels_voc/",
+
+        "train_times":          8,
+        "pretrained_weights":   "full_yolo_raccoon.h5",
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epochs":            50,
+        "warmup_epochs":        3,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "full_yolo_plane.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+
+        "valid_times":          1
+    }
+}
